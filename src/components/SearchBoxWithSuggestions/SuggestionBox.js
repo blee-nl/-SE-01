@@ -22,35 +22,29 @@ const SuggestionBoxWrapper = styled.div`
 const suggestionListKeys = ["items", "brands", "categories"];
 
 // find letter and give style
-function highlightLetter(targetElement, words, targetLetter) {
+function highlightLetter(words, targetLetter) {
   const reg = new RegExp(targetLetter, "gi");
-  if (!reg || !targetElement) {
+  if (!reg) {
     return;
   }
-  targetElement.innerHTML = words;
-  targetElement.innerHTML = words.replace(
+  return words.replace(
     reg,
-    `<strong>${targetLetter}</strong>`
+    `<span class="highlight-letters">${targetLetter}</span>`
   );
-
-  return;
 }
 
-//  <span id={`highlight-word-${name}`}  dangerouslySetInnerHTML={{__html: name.replace(reg,`<strong>${searchWord}</strong>`)}}></span>
 // name + ({quantity})
+
 const SuggestionBox = ({ suggestionList, isShow, searchWord }) => {
   const getDisplayLabel = ({ name, quantity }) => {
-    const targetElement = document.getElementById(`highlight-word-${name}`);
-    highlightLetter(targetElement, name, searchWord);
-    const reg = new RegExp(searchWord, "gi");
+
     return (
       <>
-        <span id={`highlight-word-${name}`}>{name}</span>
-        {quantity ? `(${quantity})` : ""}{" "}
+  <span id={`highlight-word-${name}`}  dangerouslySetInnerHTML={{__html: name.replace(reg,`<strong>${searchWord}</strong>`)}}></span>
+        {quantity ? `(${quantity})` : ""}
       </>
     );
   };
-
   return (
     <SuggestionBoxWrapper>
       <div className="list-wrapper">
