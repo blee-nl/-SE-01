@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import ReactHtmlParser from "react-html-parser";
 import LinkDropDownList from "~/components/LinkDropDownList";
 
 const SuggestionBoxWrapper = styled.div`
@@ -34,13 +35,11 @@ function highlightLetter(words, targetLetter) {
 }
 
 // name + ({quantity})
-
 const SuggestionBox = ({ suggestionList, isShow, searchWord }) => {
   const getDisplayLabel = ({ name, quantity }) => {
-
     return (
       <>
-  <span id={`highlight-word-${name}`}  dangerouslySetInnerHTML={{__html: name.replace(reg,`<strong>${searchWord}</strong>`)}}></span>
+        {ReactHtmlParser(highlightLetter(name.toLowerCase(), searchWord))}{" "}
         {quantity ? `(${quantity})` : ""}
       </>
     );
@@ -65,4 +64,3 @@ const SuggestionBox = ({ suggestionList, isShow, searchWord }) => {
   );
 };
 export default SuggestionBox;
-
