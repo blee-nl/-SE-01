@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import MainPage from './pages/MainPage';
+import RootRouter from "./root.router";
 import reportWebVitals from "./reportWebVitals";
 import { GlobalStyle } from "./Style";
 
 ReactDOM.render(
   <React.StrictMode>
     <GlobalStyle />
-    <MainPage />
+    <RootRouter />
   </React.StrictMode>,
   document.getElementById("root")
 );
