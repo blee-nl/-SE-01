@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/preset-typescript": "^7.12.7",
     "axios": "^0.21.1",
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2",
@@ -11,6 +12,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "styled-components": "^5.2.1",
+    "styled-system": "^5.1.5",
     "web-vitals": "^0.2.4"
   },
   "devDependencies": {
@@ -22,15 +24,17 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "babel-loader": "^8.2.2",
     "babel-plugin-root-import": "^6.6.0",
     "eslint": "^7.17.0",
     "file-loader": "^6.1.1",
     "html-webpack-plugin": "^4.5.0",
     "webpack": "^4.44.2",
-    "webpack-cli": "^4.3.0"
+    "webpack-cli": "^4.3.0",
+    "webpack-dev-server": "^3.11.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "webpack serve --mode development  --hot --inline --open",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

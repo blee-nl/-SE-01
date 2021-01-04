@@ -12,6 +12,10 @@
           {
             "rootPathPrefix": "~",
             "rootPathSuffix": "./src"
+          },
+          {
+            "rootPathPrefix": "#",
+            "rootPathSuffix": "./src/assets"
           }
         ]
       }
