@@ -10,6 +10,7 @@ const SuggestionBoxWrapper = styled.div`
   bottom: auto;
   top: 40px;
   max-height: 0;
+  width: 100%;
   .show {
     max-height: 299px;
     overflow-y: auto;

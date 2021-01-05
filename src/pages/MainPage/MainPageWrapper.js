@@ -22,7 +22,6 @@ const BoxWithBackground = styled.div`
     height: ${({ height }) => (height ? height : "100%")};
     .text-box {
       color: #131212;
-      z-index: 100;
       font-size: 9.2rem;
       font-weight: 500;
       text-transform: uppercase;
