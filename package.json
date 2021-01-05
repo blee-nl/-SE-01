@@ -28,6 +28,7 @@
     "@testing-library/user-event": "^12.1.10",
     "babel-loader": "^8.2.2",
     "babel-plugin-root-import": "^6.6.0",
+    "concurrently": "^5.3.0",
     "eslint": "^7.17.0",
     "file-loader": "^6.1.1",
     "html-webpack-plugin": "^4.5.0",
@@ -36,7 +37,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "scripts": {
-    "start": "webpack serve --mode development  --hot --inline --open",
+    "start":  "concurrently \"webpack serve --mode development  --hot --inline --open\" \"canned -p 5000 ./api/\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -47,6 +48,7 @@
       "react-app/jest"
     ]
   },
+  "proxy": "http://localhost:5000",
   "browserslist": {
     "production": [
       ">0.2%",

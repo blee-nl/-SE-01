@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { colorChart, screen } from "~/Style";
 
 const ClickableDropDownListBox = styled.div`
   &.overlay {
@@ -7,6 +8,9 @@ const ClickableDropDownListBox = styled.div`
     left: 0;
   }
   width: 350px;
+  @media screen and (max-width: ${screen.small}) {
+    width: 100%;
+  }
   z-index: 100;
   max-height: 0;
   background-color: white;
@@ -23,18 +27,18 @@ const ClickableDropDownListBox = styled.div`
     box-shadow: 0 2px 3px 0 rgba(0, 40, 43, 0.07);
     .title {
       text-transform: uppercase;
-      background: #f8f8f8;
+      background: ${colorChart.lightShade};
       margin: 0;
       padding: 16px 20px;
       position: relative;
-      border: 1px solid #e4e7e8;
+      border: 1px solid ${colorChart.lightGray};
       border-bottom: 0;
       padding: 8px 20px 7px;
       font-weight: 600;
     }
     ul {
       background-color: white;
-      border: 1px solid #e4e7e8;
+      border: 1px solid ${colorChart.lightGray};
       border-radius: 0 0 4px 4px;
       margin: 0;
       padding: 0;
@@ -50,12 +54,12 @@ const ClickableDropDownListBox = styled.div`
           padding: 8px 20px 7px;
           display: inline-block;
           width: 100%;
-          color: #565656;
+          color: ${colorChart.darkGray};
           box-sizing: border-box;
           &:hover,
           &:focus {
             outline: none;
-            color: #242424;
+            color: ${colorChart.dimBlack};
             font-weight: 500;
             cursor: pointer;
             background-color: #f9fafb;

@@ -4,7 +4,7 @@ import camelCaseKeys from "camelcase-keys";
 export const getSearchSuggestions = async (searchWords) => {
   const params = { params: { q: searchWords } };
   const response = await axios.get(
-    "http://localhost:5000/comment/search",
+    "http://localhost:5000/search",
     params
   );
   return {
@@ -15,7 +15,7 @@ export const getSearchSuggestions = async (searchWords) => {
 
 export const getMostSearchedWords = async () => {
   const response = await axios.get(
-    "http://localhost:5000/comment/search",
+    "http://localhost:5000/search",
   );
   return {
     ...response,

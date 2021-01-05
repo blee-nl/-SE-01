@@ -20,7 +20,7 @@ const LinkDropDownList = ({
       <ul>
         {hasItems &&
           items.map((item) => {
-            const { name, link,id } = item;
+            const { name, link, id } = item;
             return (
               <li key={id ? id : name}>
                 <Link

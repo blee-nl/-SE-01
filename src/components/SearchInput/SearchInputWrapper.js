@@ -1,9 +1,10 @@
 import styled from "styled-components";
-
+import { screen } from "~/Style";
 const SearchInputWrapper = styled.div`
   position: relative;
   width: 350px;
   height: 40px;
+
   border: 1px solid  #fda727;
   border-radius: 2px;
   display:flex;
@@ -19,6 +20,12 @@ const SearchInputWrapper = styled.div`
     cursor: pointer;
     &:focus{
       outline: none;
+    }
+  }  
+  @media screen and (max-width: ${screen.small}) {
+  width: 100%;
+  .remove-btn,.dropdown-btn{
+    right:48px;
     }
   }
 `;
