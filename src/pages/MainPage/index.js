@@ -1,6 +1,6 @@
 import React from "react";
 import StorePicture from "~/assets/images/bg1.jpg";
-import { MainPageWrapper, BoxWithBackground } from "./Style";
+import { MainPageWrapper, BoxWithBackground } from "./MainPageWrapper";
 
 const MainPage = () => (
   <MainPageWrapper>

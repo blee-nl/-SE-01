@@ -1,8 +1,7 @@
 {
   "presets": [
     "@babel/preset-env",
-    "@babel/preset-react",
-    "@babel/preset-typescript"
+    "@babel/preset-react"
   ],
   "plugins": [
     [
@@ -12,6 +11,10 @@
           {
             "rootPathPrefix": "~",
             "rootPathSuffix": "./src"
+          },
+          {
+            "rootPathPrefix": "#",
+            "rootPathSuffix": "./src/assets"
           }
         ]
       }

@@ -4,13 +4,20 @@
   "private": true,
   "dependencies": {
     "axios": "^0.21.1",
+    "camelcase-keys": "^6.2.2",
     "classnames": "^2.2.6",
+    "jest": "^26.6.3",
+    "jest-html-reporters": "^2.1.2",
+    "jest-screenshot": "^0.3.2",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-html-parser": "^2.0.2",
+    "react-icons": "^4.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "styled-components": "^5.2.1",
+    "styled-system": "^5.1.5",
     "web-vitals": "^0.2.4"
   },
   "devDependencies": {
@@ -19,21 +26,36 @@
     "@babel/preset-env": "^7.12.7",
     "@babel/preset-react": "^7.12.7",
     "@babel/runtime": "^7.12.5",
+    "@storybook/addon-actions": "^6.1.11",
+    "@storybook/addon-docs": "^6.1.11",
+    "@storybook/addon-essentials": "^6.1.11",
+    "@storybook/addon-knobs": "^6.1.11",
+    "@storybook/addon-links": "^6.1.11",
+    "@storybook/addon-viewport": "^6.1.11",
+    "@storybook/node-logger": "^6.1.11",
+    "@storybook/preset-create-react-app": "^3.1.5",
+    "@storybook/react": "^6.1.11",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "babel-loader": "^8.2.2",
     "babel-plugin-root-import": "^6.6.0",
+    "concurrently": "^5.3.0",
     "eslint": "^7.17.0",
     "file-loader": "^6.1.1",
     "html-webpack-plugin": "^4.5.0",
+    "jest-styled-components": "^7.0.3",
     "webpack": "^4.44.2",
-    "webpack-cli": "^4.3.0"
+    "webpack-cli": "^4.3.0",
+    "webpack-dev-server": "^3.11.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently \"webpack serve --mode development  --hot --inline --open\" \"canned -p 5000 ./api/\"",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "jest --no-watchman --config jest.unit.config.js",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": [
@@ -41,6 +63,7 @@
       "react-app/jest"
     ]
   },
+  "proxy": "http://localhost:5000",
   "browserslist": {
     "production": [
       ">0.2%",

@@ -1,0 +1,255 @@
+// this response is the default:
+//! params: {"search": "default"}
+{
+  "search": "",
+  "most-searched-word": [
+    { "id": "dklex43",
+      "name": "Pure cashmere muffler",
+      "type": "search",
+      "link": "/shop/?search=pure+cashmere+muffler"
+    },
+    { "id": "clkjs4892",
+      "name": "Adjustable desk",
+      "type": "/search",
+      "link": "/shop/?search=adjustable+desk"
+    },
+    { "id": "56lex43",
+      "name": "Tommey jeans",
+      "type": "brand",
+      "link": "/brand/tommey+jeans"
+    },
+    { "id": "oip49343",
+      "name": "Sport men clothes",
+      "type": "catergory",
+      "link": "/sport/men/clothes"
+    }
+  ]
+}
+
+//! params: {"q": "trui"}
+{
+  "search": "trui",
+  "results": {
+    "brands": [
+      {
+        "id": "1fd568",
+        "name": "Gantrui",
+        "quantity": 350
+      },
+      {
+        "id": "de1023",
+        "name": "Dailtrui",
+        "quantity": 350
+      },
+      {
+        "id": "ce1036",
+        "name": "Tintruilly",
+        "quantity": 350
+      }
+    ],
+    "items": [
+      {
+        "id": "dgh1",
+        "name": "Gore goem trui"
+      },
+      {
+        "id": "ce20",
+        "name": "Attension island trui"
+      },
+      {
+        "id": "9koc21",
+        "name": "Tommy trui met structuur"
+      }
+    ],
+    "best-sellers": [
+      {
+        "id": "dr6b156",
+        "brand": "ABC",
+        "image-address": "https://terrigen-cdn-dev.marvel.com/content/prod/1x/blackwidow_lob_crd_04.jpg",
+        "name": "ABC  tenetton in mondalblend  "
+      },
+      {
+        "id": "tiopd71480",
+        "brand": "Polo Ralph",
+        "image-address": "https://terrigen-cdn-dev.marvel.com/content/prod/1x/avengersendgame_lob_crd_05_2.jpg",
+        "name": "Polo Ralph ritruie Lauren"
+      },
+      {
+        "id": "3dse53418",
+        "brand": "Trust",
+        "image-address": "https://terrigen-cdn-dev.marvel.com/content/prod/1x/ant-manthewasp_lob_crd_01.jpg",
+        "name": "Trust wetruie"
+      }
+    ],
+    "items-numbers": 42950,
+    "categories": [
+      {
+        "id": "156428",
+        "name": "Trui",
+        "quantity": 350
+      },
+      {
+        "id": "1dt023",
+        "name": "Women truien",
+        "quantity": 1350
+      },
+      {
+        "id": "103dew6",
+        "name": "Men truien",
+        "quantity": 3350
+      }
+    ]
+  }
+}
+
+//! params: {"q": "tr"}
+{
+  "search": "trui",
+  "results": {
+    "brands": [
+      {
+        "id": "1fd568",
+        "name": "Gantrui",
+        "quantity": 350
+      },
+      {
+        "id": "de1023",
+        "name": "Dailtrui",
+        "quantity": 350
+      },
+      {
+        "id": "ce1036",
+        "name": "Tintruilly",
+        "quantity": 350
+      }
+    ],
+    "items": [
+      {
+        "id": "dgh1",
+        "name": "Gore goem trui"
+      },
+      {
+        "id": "ce20",
+        "name": "Attension island trui"
+      },
+      {
+        "id": "9koc21",
+        "name": "Tommy trui met structuur"
+      }
+    ],
+    "best-sellers": [
+      {
+        "id": "dr6b156",
+        "brand": "ABC",
+        "image-address": "https://terrigen-cdn-dev.marvel.com/content/prod/1x/blackwidow_lob_crd_04.jpg",
+        "name": "ABC  tenetton in mondalblend  "
+      },
+      {
+        "id": "tiopd71480",
+        "brand": "Polo Ralph",
+        "image-address": "https://terrigen-cdn-dev.marvel.com/content/prod/1x/avengersendgame_lob_crd_05_2.jpg",
+        "name": "Polo Ralph ritruie Lauren"
+      },
+      {
+        "id": "3dse53418",
+        "brand": "Trust",
+        "image-address": "https://terrigen-cdn-dev.marvel.com/content/prod/1x/ant-manthewasp_lob_crd_01.jpg",
+        "name": "Trust wetruie"
+      }
+    ],
+    "items-numbers": 42950,
+    "categories": [
+      {
+        "id": "156428",
+        "name": "Trui",
+        "quantity": 350
+      },
+      {
+        "id": "1dt023",
+        "name": "Women truien",
+        "quantity": 1350
+      },
+      {
+        "id": "103dew6",
+        "name": "Men truien",
+        "quantity": 3350
+      }
+    ]
+  }
+}
+
+//! params: {"q": "tru"}
+ {
+    "search": "trui",
+    "results": {
+      "brands": [
+        {
+          "id": "1fd568",
+          "name": "Gantrui",
+          "quantity": 350
+        },
+        {
+          "id": "de1023",
+          "name": "Dailtrui",
+          "quantity": 350
+        },
+        {
+          "id": "ce1036",
+          "name": "Tintruilly",
+          "quantity": 350
+        }
+      ],
+      "items": [
+        {
+          "id": "dgh1",
+          "name": "Gore goem trui"
+        },
+        {
+          "id": "ce20",
+          "name": "Attension island trui"
+        },
+        {
+          "id": "9koc21",
+          "name": "Tommy trui met structuur"
+        }
+      ],
+      "best-sellers": [
+        {
+          "id": "dr6b156",
+          "brand": "ABC",
+          "image-address": "https://terrigen-cdn-dev.marvel.com/content/prod/1x/blackwidow_lob_crd_04.jpg",
+          "name": "ABC  tenetton in mondalblend  "
+        },
+        {
+          "id": "tiopd71480",
+          "brand": "Polo Ralph",
+          "image-address": "https://terrigen-cdn-dev.marvel.com/content/prod/1x/avengersendgame_lob_crd_05_2.jpg",
+          "name": "Polo Ralph ritruie Lauren"
+        },
+        {
+          "id": "3dse53418",
+          "brand": "Trust",
+          "image-address": "https://terrigen-cdn-dev.marvel.com/content/prod/1x/ant-manthewasp_lob_crd_01.jpg",
+          "name": "Trust wetruie"
+        }
+      ],
+      "items-numbers": 42950,
+      "categories": [
+        {
+          "id": "156428",
+          "name": "Trui",
+          "quantity": 350
+        },
+        {
+          "id": "1dt023",
+          "name": "Women truien",
+          "quantity": 1350
+        },
+        {
+          "id": "103dew6",
+          "name": "Men truien",
+          "quantity": 3350
+        }
+      ]
+    }
+  }
