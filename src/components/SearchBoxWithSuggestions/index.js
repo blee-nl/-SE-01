@@ -76,7 +76,8 @@ const SearchBoxWithSuggestions = () => {
 
   const getSuggestions = async (searchWord) => {
     try {
-      const { data } = await getSearchSuggestions("trui");
+      // Currently canned api is only has topsearch and seach variabout tr, tru, trui. 
+      const { data } = await getSearchSuggestions(searchWord); 
       setSearchSuggestion(data.results);
     } catch (error) {
       console.log("Error: ", error.message);
@@ -111,6 +112,7 @@ const SearchBoxWithSuggestions = () => {
         enableTopSearchesButton
         toggleShowTopSearches={toggleShowTopSearches}
         setSearchWord={setSearchWord}
+        onFocus={handleChange}
       />
       <LinkDropDownList
         isOverlay

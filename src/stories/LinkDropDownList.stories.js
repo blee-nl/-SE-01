@@ -17,17 +17,17 @@ export function LinkDropDownListWithTitle() {
         title="brands"
         items={[
           {
-            id: 1568,
+            id: '1568',
             name: "Gantrui",
             quantity: 350,
           },
           {
-            id: 1023,
+            id: '1023',
             name: "Dailturi",
             quantity: 350,
           },
           {
-            id: 1036,
+            id: '1036',
             name: "Tinturilly",
             quantity: 350,
           },

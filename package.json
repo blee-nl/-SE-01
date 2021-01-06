@@ -44,6 +44,7 @@
     "eslint": "^7.17.0",
     "file-loader": "^6.1.1",
     "html-webpack-plugin": "^4.5.0",
+    "jest-styled-components": "^7.0.3",
     "webpack": "^4.44.2",
     "webpack-cli": "^4.3.0",
     "webpack-dev-server": "^3.11.0"

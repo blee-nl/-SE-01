@@ -6,7 +6,7 @@ import HeaderWrapper from "./HeaderWrapper";
 
 const Header = () => (
   <HeaderWrapper>
-    <Link to="/">
+    <Link to="/" data-testid="home-logo-link">
       <img className="logo" src={Logo} alt="logo" />
     </Link>
     <SearchBox />

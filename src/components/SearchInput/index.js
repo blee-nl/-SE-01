@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import PropTypes from "prop-types";
 import { FaSearch, FaAngleDown, FaAngleUp, FaTimes } from "react-icons/fa";
 import SearchInputWrapper from "./SearchInputWrapper";
@@ -12,9 +12,15 @@ const SearchBox = ({
   toggleShowTopSearches,
   setSearchWord,
   searchWord,
+  onFocus
 }) => {
+  
+  const [inputValue, setValue] = useState(searchWord || '') 
+
   const onChange = (e) => {
-    setSearchWord(e.target.value);
+    const targetValue = e.target.value;
+    setValue(targetValue)
+    setSearchWord(targetValue);
   };
 
   const onSubmit = (e) => {
@@ -28,6 +34,7 @@ const SearchBox = ({
   };
 
   const onClear = () => {
+    setValue('');
     setSearchWord("");
   };
 
@@ -42,28 +49,30 @@ const SearchBox = ({
     return () => {
       document.removeEventListener("keydown", listener);
     };
-  }, [searchWord]);
+  }, [inputValue]);
 
-  const showRemoveBtn = searchWord &&searchWord.length > 0;
+  const showRemoveBtn = inputValue &&inputValue.length > 0;
   const showDropdownBtn = enableTopSearchesButton && !showRemoveBtn;
   return (
     <SearchInputWrapper>
       <Input
         id="search-box"
+        data-testid="search-box"  
         type="text"
         className="searchBox"
         placeholder="Search"
-        value={searchWord}
+        value={inputValue}
         onChange={onChange}
         autoComplete="off"
+        onFocus={()=>onFocus(searchWord)}
       />
       {showRemoveBtn && (
-        <button className="remove-btn" onClick={onClear}>
+        <button className="remove-btn" data-testid="search-remove-btn" onClick={onClear}>
           <FaTimes />
         </button>
       )}
       {showDropdownBtn && (
-        <button className="dropdown-btn" onClick={onClickSettingBtn}>
+        <button className="dropdown-btn" data-testid="dropdown-btn" onClick={onClickSettingBtn}>
           {showTopSearches ? <FaAngleUp /> : <FaAngleDown />}
         </button>
       )}
@@ -77,7 +86,8 @@ const SearchBox = ({
 SearchBox.defaultProps = {
   enableTopSearchesButton: false,
   showTopSearches: false,
-  searchWord:""
+  searchWord:"",
+  onFocus:()=>{}
 };
 
 SearchBox.propTypes = {
@@ -87,6 +97,7 @@ SearchBox.propTypes = {
   toggleShowTopSearches: PropTypes.func,
   setSearchWord: PropTypes.func.isRequired,
   searchWord: PropTypes.string.isRequired,
+  onFocus:PropTypes.func.isRequired, 
 };
 
 export default SearchBox;

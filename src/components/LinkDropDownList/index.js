@@ -15,8 +15,9 @@ const LinkDropDownList = ({
   return (
     <DropDownListBox
       className={classNames({ show: hasItems, overlay: isOverlay })}
+      id="dropdown-box"
     >
-      {title && hasItems && <div className="title">{title}</div>}
+      {title && hasItems && <div className="title"  data-testid="dropdown-list-title" >{title}</div>}
       <ul>
         {hasItems &&
           items.map((item) => {
@@ -41,6 +42,10 @@ const LinkDropDownList = ({
     </DropDownListBox>
   );
 };
+LinkDropDownList.defaultProps = {
+  items:[]
+};
+
 LinkDropDownList.propTypes = {
   isShow: PropTypes.bool,
   items: PropTypes.arrayOf(

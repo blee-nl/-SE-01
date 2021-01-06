@@ -7,7 +7,7 @@ module.exports = {
     '\\.(jpg|png|svg)$': '<rootDir>/file-mock.js',
   },
   setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
-  testMatch: ['<rootDir>/src/**/tests/**/*.(spec|test).js'],
+  testMatch: ['<rootDir>/src/components/**/tests/**/*.(spec|test).js'],
   collectCoverage: true,
   coverageDirectory: 'reports/unit',
   coverageReporters: ['html-spa', 'text-summary'],
